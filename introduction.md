@@ -32,5 +32,34 @@ Bias in NLP systems can emerge both directly and indirectly, and it is critical 
 
 ---
 
-## Attention
+## Attention:
+- **Definition**: Relates elements from one sequence to another.
+- **Purpose**: Helps focus on important parts of the input sequence while processing each token.
+- **Example**: In machine translation, when translating a word, the model might focus on other relevant words in the sequence for better context.
 
+## Self-Attention:
+- **Definition**: Relates each token in a sequence to every other token in the same sequence.
+- **Purpose**: Each word gets context by attending to other words in the sentence, capturing dependencies regardless of distance.
+- **Example**: In "The cat sat on the mat," the word "cat" attends to words like "sat" and "mat" for better understanding.
+  
+## Why Self-Attention is Important:
+1. **Captures long-range dependencies**: Allows the model to understand distant relationships between words.
+2. **Parallelizable**: Unlike RNNs, it processes the entire sequence at once, speeding up training.
+3. **Context-sensitive representations**: Each word embedding is dynamically weighted by other words in the sequence.
+
+---
+
+## Encoder - Decoder Architecture
+
+The transformers are based entirely on self-attention based encoder decoder architecture.
+
+![Encoder Decoder Architecture](images/encoder_decoder.png)
+
+- ***Encoder:*** 
+    - Takes in input and converts it to a matrix representation.
+    - ![encoder zoomed in](images/encoder.png)
+- ***Decoder:*** 
+    - Takes in teh matrix representation and iteratively generates the output.
+    - ![Decoder zoomed in](images/decoder.png)
+
+Note that both input to the encoder anf the output of the decoder are of variable length
