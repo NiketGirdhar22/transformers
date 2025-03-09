@@ -42,7 +42,7 @@ Transformers rely on both self-attention (to understand internal sequence relati
 
 ---
 
-## Scaled Dot Product Attention
+## **Scaled Dot Product Attention**
 
 ### **Scaled Dot-Product Attention in Transformers**
 
@@ -51,11 +51,10 @@ Scaled Dot-Product Attention is a fundamental mechanism in Transformers that all
 
 ### **Formula**
 
-Let $X$ be the tokenized input. From that, we compute three matrices: Query, Key, and Value:
+Lets take $X$ as the tokenized input.  
+And from that, we compute 3 matrices: Query, Key, and Value, which is done as:  
 
-$$
-Q = XW_Q, \quad K = XW_K, \quad V = XW_V
-$$
+![Getting Q, K, and V matrices from X](images/QKV.png)
 
 The attention function is computed as:
 
@@ -69,23 +68,34 @@ Where:
 - $V$ is the Value matrix
 - $d_k$ is the dimensionality of the Key vectors
 
+Where:
+- **$Q$ (Query)**: The current token’s representation.
+- **$K$ (Key)**: All tokens in the sequence (same as $Q$ in self-attention, different in cross-attention).
+- **$V$ (Value)**: The representations used to generate output.
+- **$d_k$**: The dimensionality of the key vectors (used for scaling).
+- **Softmax**: Ensures attention weights sum to 1.
+
 ### **Intuitive Meaning of Matrices**  
 
 1. **$Q$ (Query) – "What am I looking for?"**  
    - Represents the **current token’s request** for relevant information.  
    - **Analogy:** A student asking a question in class.  
+   - **Example:** If the word "cat" is processing itself, its Query vector helps determine what information it needs from other words.  
 
 2. **$K$ (Key) – "What do I have to offer?"**  
    - Represents the **content** of each token, which other tokens may query.  
    - **Analogy:** A library’s catalog system—each book (token) has a description (key), and queries search through these descriptions.  
+   - **Example:** If the Query asks about “cat,” the Key of “animal” might indicate relevance.  
 
 3. **$V$ (Value) – "What information should I return?"**  
    - Stores the **actual information** that will be retrieved based on attention scores.  
    - **Analogy:** The actual book in a library that matches a search query.  
+   - **Example:** If the Query is about “cat” and the Key suggests relevance, the Value might contain details like “a small domesticated carnivorous mammal.”  
 
 4. **$\text{softmax}(QK^T)$ – "How relevant is this?"**  
    - Determines **how much focus** each token should give to others.  
    - **Analogy:** A search engine ranking results by relevance.  
+   - **Example:** If “cat” queries “animal” and “car,” softmax ensures that “animal” gets a higher relevance score.  
 
 ### **Summary Table**  
 
@@ -103,9 +113,16 @@ Where:
 ### **Steps in Scaled Dot-Product Attention**
 
 1. **Compute similarity scores** between **queries ($Q$)** and **keys ($K$)** via matrix multiplication $QK^T$.
+   - - ***The resulting matrix $QK^T$  is a square matrix of dimensions (tokens × tokens), representing attention scores between tokens.***  
+   - ![Multiply example](images/QKt.png)
+
 2. **Scale the scores** by dividing by $\sqrt{d_k}$ to prevent large values from dominating the softmax function.  
+
 3. **Apply softmax** to normalize scores into attention weights, ensuring they sum to 1.  
+
 4. **Multiply the attention weights** with the **values ($V$)** to compute the final attention output.
+   - - ***This step transforms the V matrix from containing contextless information to context-aware information by weighting each token’s contribution based on attention scores.***     
+![Formula scale dot-product](images/formula_scale_dot.png)
 
 ### **Example**
 If we have three words:  
