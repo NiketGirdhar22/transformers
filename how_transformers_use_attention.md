@@ -143,3 +143,17 @@ This mechanism enables Transformers to capture **context-dependent** relationshi
 
 ## Multi-Headed Attention
 
+![multi-head attention overview](images/multiheadattention.png)
+
+Multi-Head Attention is a key mechanism used in transformer models, like those behind BERT and GPT, to improve the ability of a model to process information in parallel and capture various relationships within the data.
+
+### How it Works:
+- **Parallel Attention:** Instead of having a single attention mechanism, Multi-Head Attention runs multiple attention mechanisms (heads) in parallel. Each head learns to focus on different parts of the input sequence, capturing different relationships or patterns.
+  
+- **Learned Representations:** Each attention head works on a different linear projection of the input data. The final output is a concatenation of the results from each head, which is then linearly transformed into the final output.
+
+### Why it's Useful:
+- **Capturing Diverse Features:** Each attention head is able to focus on different aspects of the input, such as different words, sentences, or relationships. This helps in understanding complex contexts and nuanced patterns.
+- **Resource Efficiency:** The model can capture these different relationships simultaneously without needing multiple passes through the data, making it computationally efficient.
+
+So Multi-Head Attention improves the model's ability to handle complex input relationships by capturing various features at once, providing richer and more detailed representations.

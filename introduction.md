@@ -1,6 +1,6 @@
 # Attention and Language Models
 
-## Introdiction to NLP
+## Introduction to NLP
 Natural Language Processing (NLP) is a field within Artificial Intelligence (AI) focused on enabling computers to interpret, understand, and interact with human language in a way that is both meaningful and useful.
 
 NLP combines:
