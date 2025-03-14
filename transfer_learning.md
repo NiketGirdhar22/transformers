@@ -58,3 +58,46 @@ Each approach has its benefits and is suited for different scenarios. For exampl
 - The first approach might be chosen when you have a large amount of task-specific labeled data and want to fully adapt the model to your problem.
 - The second approach is helpful when you want to fine-tune on a smaller dataset and save computational resources.
 - The third approach is best when you have limited labeled data and want to retain the general knowledge learned by the pre-trained model.
+
+---
+
+## What is PyTorch?
+
+PyTorch is an open-source deep learning framework developed by Facebook. It provides a flexible and dynamic approach to building and training machine learning models, supporting features like GPU acceleration, automatic differentiation, and easy integration with pre-trained models.
+
+- [Introduction to Pytorch - Python Notebook](codes/pytorch.ipynb)
+
+### Why Use PyTorch for Fine-Tuning?
+
+1. **Dynamic Computation Graph**: PyTorch’s "define-by-run" approach makes it easy to modify models and experiment with different architectures during fine-tuning.
+   
+2. **Pre-Trained Models**: PyTorch offers a wide range of pre-trained models that can be adapted for your specific task, saving time and computational resources.
+
+3. **GPU Support**: Native integration with CUDA allows for faster training on GPUs, which is crucial for fine-tuning large models.
+
+4. **Easy Model Modification**: PyTorch makes it simple to modify pre-trained models (e.g., replacing the final layer or freezing layers) for your target task.
+
+5. **Efficiency and Flexibility**: It’s memory-efficient and provides full control over the training process, ideal for fine-tuning with limited data or computational resources.
+
+***Fine tuning with pytorch without any additional resources:***
+
+![Fine-tuning with pytorch without any additional resources](images/fine_tune_pytorch.png)
+
+***Code sample for fine tuning without additional resources:***
+![Fine-tuning without additional resources code sample](images/fine_tune_code.png)
+
+- This has to be done manually so to overcome this we have Huggingface Trainer API
+
+- There are 4 objects to it:
+   - ***Dataset:*** Holds all data and splits it into training/testing.
+   - ***DataCollator:*** Forms batches of data from Datasets.
+   - ***TrainingArguments:*** Keeps track of training arguments like saving strategy and learning rate scheduler parameters. 
+   - ***Trainer:*** API to the pytorch training loop for most standard cases.
+
+***Fine tuning with pytorch using TrainerAPI:***
+- ![trainerAPI](images/trainerAPI.png)
+
+***Code sample for fine tuning with TrainerAPI:***
+- - ![Fine-tuning with trainerAPI](images/trainer_code.png)
+
+PyTorch's flexibility, strong community, and ease of use make it a top choice for fine-tuning models.
