@@ -49,7 +49,7 @@ Bias in NLP systems can emerge both directly and indirectly, and it is critical 
 
 ---
 
- ## Encoder - Decoder Architecture
+## Encoder - Decoder Architecture
 
 Transformers are built on the self-attention-based encoder-decoder architecture, which is designed to handle sequence-to-sequence tasks efficiently.
 
