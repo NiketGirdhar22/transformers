@@ -68,3 +68,23 @@ We can sometimes shift to a smaller model to get a speed boost if needs meet
 
 ---
 
+## Processing word sequences for BERT
+
+Before the word sequences are given as input to encoder stack, they are tokenized and embedded into vectors.
+
+- **Tokens:** 
+  - Words and tokens are not one and the same. 
+  - Splitup of word sequence into smaller chunks is called tokenization and each chunk is called token.
+  - Token may or may not be a word in the sentence.
+
+- **Embeddings:**
+- Embeddings are dense vector representations of tokens that capture semantic meaning.
+- Each token is converted into a vector that represents its meaning in a higher-dimensional space, allowing the model to understand relationships between words.
+- **Types of Embeddings:**
+  - **Word Embeddings:** Traditional models like Word2Vec and GloVe represent each word as a fixed vector.
+  - **Contextual Embeddings:** In models like BERT, embeddings are dynamic and change based on the context of the token within the sentence.
+- **BERT Embeddings:**
+  - In BERT, embeddings are the sum of three components:
+    1. **Token Embeddings:** Each token is represented as a vector, usually learned during pretraining.
+    2. **Segment Embeddings:** BERT can handle sentence pairs (e.g., Question-Answering tasks), and segment embeddings help distinguish between sentences in these pairs.
+    3. **Positional Embeddings:** Since BERT is a transformer model and doesn't have a built-in understanding of the order of tokens, positional embeddings are added to capture the relative position of tokens in the sequence.
