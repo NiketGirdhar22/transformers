@@ -104,3 +104,49 @@ In case there is any word in the sequence not in the volabulary of the tokenizer
     - ***Sinan doesn't exist in the tokenizer vocabulary so it does the following tokenization.
 - **Tokenized output:** ["[CLS]","Sin","##an","loves","to","travel","[SEP]"]
     - **##** indicates that the word is a subword.
+
+***NOTE:*** BERT has a maximum sequence length of **512 tokens**
+  - For sequences less than 512 tokens, it will be padded to reach 512.
+  - For sequences more than 512 tokens, the model may tend to generate error
+
+- There is 2 types of tokenization:
+
+  - **Uncased Tokenization**:
+    - It removes accents and lowercases the text, standardizing the input to make it uniform.
+    - Example: "Café Dupont" becomes "cafe dupont".
+    - This is useful when you want to treat words with accents or uppercase letters as equivalent to their lowercase counterparts.
+
+  - **Cased Tokenization**:
+    - It preserves both the accents and the case (uppercase/lowercase) of the input.
+    - Example: "Café Dupont" stays as "Café Dupont".
+    - This is helpful when case and accents carry meaning, like distinguishing between "Apple" (the company) and "apple" (the fruit), or other context-sensitive situations.
+
+---
+
+## BERT embedding layers
+
+BERT applies 3 seperate embedding layers:
+
+- **Token Embeddings:** 
+  - Represents context-less meaning of each token.
+  - A look-up of 30,522 possible vectors: BERT-base.
+  - ***Learnable during training.***
+
+- **Segment Embeddings:**
+  - Distingushes between multiple inputs.
+  - Lookup of 2 possible vectors(for sentences A and B).
+  - ***Non-learnable.***
+
+- **Position Embeddings:**
+  - Used to represent tokens position in the sentence.
+  - ***Non-learnable.***
+
+![embedding layers](images/embedding_types.png)
+
+BERT needs a sense of direction/position of tokens and for that it uses a combination of sine and cosine waves which indicates the position of tokens in the sequence.
+![positional embeddings](images/position.png)
+
+---
+
+## Overall flow/visualization of BERT
+
