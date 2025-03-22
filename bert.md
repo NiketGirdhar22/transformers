@@ -88,3 +88,19 @@ Before the word sequences are given as input to encoder stack, they are tokenize
     1. **Token Embeddings:** Each token is represented as a vector, usually learned during pretraining.
     2. **Segment Embeddings:** BERT can handle sentence pairs (e.g., Question-Answering tasks), and segment embeddings help distinguish between sentences in these pairs.
     3. **Positional Embeddings:** Since BERT is a transformer model and doesn't have a built-in understanding of the order of tokens, positional embeddings are added to capture the relative position of tokens in the sequence.
+
+---
+
+## Wordpiece tokenizer
+
+This is the method used to tokenize a word sequence in BERT model.
+
+This is done so by dividing the sequence into words that are in the tokenizer dictionary/vocabulary as it has over 30k words.
+- **SEQUENCE:** "Today is a beautiful day"
+- **Tokenized output:** ["[CLS]","Today","is","a","beautiful","day","[SEP]"]
+
+In case there is any word in the sequence not in the volabulary of the tokenizer, BERT deals with that scenario by splitting the words into pieces which are included in the vocabulary.
+- **SEQUENCEL** "Sinan loves to travel"
+    - ***Sinan doesn't exist in the tokenizer vocabulary so it does the following tokenization.
+- **Tokenized output:** ["[CLS]","Sin","##an","loves","to","travel","[SEP]"]
+    - **##** indicates that the word is a subword.
