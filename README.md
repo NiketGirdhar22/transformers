@@ -9,3 +9,5 @@ Flow:
 - [BERT architecture in play using Python](codes/bert.ipynb)
 - [Understanding Pretraining and Fine-Tuning BERT](bert_pretrain_finetune.md)
 - [Pretraining and Fine-Tuning BERT in play using Python](codes/pretrain_finetune_bert.ipynb)
+- [Understanding the derivative architectures of BERT](derivatives_of_BERT.md)
+- [Implementing derivative architectures using Python](codes/bert_derivatives.ipynb)
