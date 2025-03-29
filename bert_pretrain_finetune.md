@@ -70,3 +70,9 @@ After we get a pretained BERT model, we can further train it for specifc tasks. 
     - Pass these seuences to the pre-trained BERT and get a tokenized output.
     - Add a FeedForward layer on top of each token like in Token Classification.
     - Predict wheather each token represents the start or the end of the answer to the question.
+
+---
+
+## Codes
+
+- [Pretraining and Fine-Tuning BERT in play using Python](codes/pretrain_finetune_bert.ipynb)

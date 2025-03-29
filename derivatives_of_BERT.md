@@ -1,4 +1,4 @@
-# Derivatives of BERT
+# Derivatives of BERT / Flavors of BERT
 
 BERT architecture was the base for various derivative architectures. Few popular BERT derivative architectures are:
 
@@ -28,3 +28,9 @@ BERT architecture was the base for various derivative architectures. Few popular
 
 
 Each derivative tends to enhance BERT by either altering its architecture and/or its pre-training.
+
+--- 
+
+## Codes
+
+- [Implementing derivative architectures using Python](codes/bert_derivatives.ipynb)

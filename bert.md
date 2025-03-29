@@ -151,3 +151,9 @@ BERT needs a sense of direction/position of tokens and for that it uses a combin
 ## Overall flow/visualization of BERT
 
 ![BERT arch visualization](images/BERT_arch_overview.png)
+
+---
+
+## Codes
+
+- [BERT architecture in play using Python](codes/bert.ipynb)
