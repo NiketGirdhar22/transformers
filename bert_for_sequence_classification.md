@@ -15,4 +15,4 @@
 
 ## Code
 
-[Implementation of Sequence Classification for BERT in Python](bert_seq_classification.ipynb)
+[Implementation of Sequence Classification for BERT in Python](codes/bert_seq_classification.ipynb)
