@@ -75,4 +75,4 @@ After we get a pretained BERT model, we can further train it for specifc tasks. 
 
 ## Codes
 
-- [Pretraining and Fine-Tuning BERT in play using Python](codes/pretrain_finetune_bert.ipynb)
+- [Pretraining and Fine-Tuning BERT in play using Python](codes/bert/pretrain_finetune_bert.ipynb)

@@ -156,4 +156,4 @@ BERT needs a sense of direction/position of tokens and for that it uses a combin
 
 ## Codes
 
-- [BERT architecture in play using Python](codes/bert.ipynb)
+- [BERT architecture in play using Python](codes/bert/bert.ipynb)

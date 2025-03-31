@@ -33,4 +33,4 @@ Each derivative tends to enhance BERT by either altering its architecture and/or
 
 ## Codes
 
-- [Implementing derivative architectures using Python](codes/bert_derivatives.ipynb)
+- [Implementing derivative architectures using Python](codes/bert/bert_derivatives.ipynb)

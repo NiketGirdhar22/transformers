@@ -24,4 +24,4 @@ BERT uses Extractive Answering process in which answer to the question asked is 
 
 ## Code
 
-[Implementation of Question Asnwering for BERT in Python](codes/bert_for_qa.ipynb)
+[Implementation of Question Asnwering for BERT in Python](codes/bert/bert_for_qa.ipynb)

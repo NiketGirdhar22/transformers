@@ -12,4 +12,4 @@
 
 ## Code:
 
-[Implementation of Token Classification for BERT in Python](codes/bert_token_classification.ipynb)
+[Implementation of Token Classification for BERT in Python](codes/bert/bert_token_classification.ipynb)
