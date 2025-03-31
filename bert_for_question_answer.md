@@ -1,6 +1,17 @@
 # Fine-tuning BERT for sequence classification
 
-![BERT for sequence classification](images/seq_classification_bert.png)
+![BERT for question answering](images/bert_for_qa.png)
+
+BERT uses Extractive Answering process in which answer to the question asked is direct substring in the context.
+
+***Example***
+
+- **Question:** What is Matt like?
+- **Context:** Matt is a great guy who will always be there for you whenever you need.
+
+***For Extractive Answering:*** "The kind guy who will alwats be there for you whenever you need" - Used by BERT and its flovors
+
+***For Abstractive Answering:*** "A kind guy" - Used by GPT and T5
 
 ## Steps to be followed:
 
