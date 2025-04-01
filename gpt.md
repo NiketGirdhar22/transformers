@@ -45,6 +45,23 @@ GPT's tokenizatuon also uses the simialar format to BERT for dealing with unknow
 
 ---
 
+## Embeddings in GPT
+
+GPT has 2 seperate embeddings to tokenize sequences:
+
+- **Word Token Embeddings (WTE):**
+    - Represents context-free meaning of each token.
+    - A look-up of over 50,000 possible vectors.
+    - ***Learnable*** during training process.
+
+- **Word Position Embeddings (WPE):**
+    - Used to represent the position of tokens in the sequence.
+    - ***Non-Learnable*** during training process.
+
+NOTE: The difference between BERT and GPT is that BERT had an additional layer of embeddings called segment embeddings for Segment A and Segment B differenciation. GPT has no concept of sentences as it can go however long it can before it reaches the end token.
+
+---
+
 ## Code
 
 [Experimenting with GPT architecture in python](codes/gpt/gpt.ipynb)
