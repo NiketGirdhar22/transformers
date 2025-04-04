@@ -90,6 +90,7 @@ Sure! Here’s the completion of the list of parameters typically used during in
 
 - **`top_k # int value`**  
     - While predicting, looks at the top `k` responses based on their confidence scores.  
+    - Takes into consideration tok `k` tokens and re-adjusts their probabilities to add up to 1 ignoring the rest of the tokens.
     - Set it to `0` to deactivate this parameter, meaning the model will consider all possible responses.
 
 - **`top_p # float value`**  
@@ -127,6 +128,15 @@ Sure! Here’s the completion of the list of parameters typically used during in
     - Useful for getting multiple variations of a response, typically used in cases where creativity or diversity is desired.
 
 ---
+
+## Overfitting in GPT
+
+GPT models are very susceptible to becoming overfit i.e. it may memorize text very rigidly and mot realize how to generalize text no matter how the parameters are set. This is known as narrow generation ability. This is not just restricted to GPTs but any deep learning based language models. 
+
+Overfitting in GPT models occurs when the model memorizes specific patterns from training data and fails to generalize to new inputs. This leads to narrow generation, where responses become repetitive or rigid, and the model becomes overly sensitive to small changes in input. To prevent overfitting, techniques like regularization, data augmentation, early stopping, and training on diverse datasets are used. Overfitting can also amplify biases if the training data contains them.
+
+---
+
 ## Code
 
 [Experimenting with GPT architecture in python](codes/gpt/gpt.ipynb)
