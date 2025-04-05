@@ -15,3 +15,4 @@ Flow:
         - [BERT for Question Answering](bert_for_question_answer.md)
 - **GPT**
     - [Understaing GPT](gpt.md)
+    - [Pre-Training in GPT](pretraining_gpt.md)
