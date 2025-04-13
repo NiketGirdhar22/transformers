@@ -41,3 +41,4 @@ Zero and One shot learning is subset of Few-shot leanring where we give zero or 
 
 - [Pretraining GPT in play using Python](codes/gpt/pretrain_gpt.ipynb)
 - [Fine-Tuning GPT for style completion using Python](codes/gpt/gpt_style.ipynb)
+- [Fine-Tuning GPT for code generation using Python](codes/gpt/gpt_code_dictation.ipynb)
