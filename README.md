@@ -13,6 +13,7 @@ Flow:
         - [BERT for Sequence Classification](bert_for_sequence_classification.md)
         - [BERT for Token Classification](bert_for_token_classification.md)
         - [BERT for Question Answering](bert_for_question_answer.md)
+    - [Siamese BERT networks for semantic searching](Siamese_BERT_networks_for_semantic_searching.md)
 - **GPT**
     - [Understaing GPT](gpt.md)
     - [Pre-Training in GPT](pretraining_gpt.md)
