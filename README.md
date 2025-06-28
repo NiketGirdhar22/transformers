@@ -17,3 +17,4 @@ Flow:
 - **GPT**
     - [Understaing GPT](gpt.md)
     - [Pre-Training in GPT](pretraining_gpt.md)
+    - [Teaching GPT multiple tasks at once with prompt engineering](codes/gpt/teaching_gpt_multiple_tasks_with_prompt_engg.ipynb)
