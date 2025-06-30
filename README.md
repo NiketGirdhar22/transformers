@@ -20,3 +20,5 @@ Flow:
     - [Teaching GPT multiple tasks at once with prompt engineering](codes/gpt/teaching_gpt_multiple_tasks_with_prompt_engg.ipynb)
 - **T5**
     - [Understanding T5](t5.md)
+    - [T5 implemetation and testing in python](codes/t5/base_t5.ipynb)
+    
