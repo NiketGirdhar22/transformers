@@ -21,4 +21,5 @@ Flow:
 - **T5**
     - [Understanding T5](t5.md)
     - [T5 implemetation and testing in python](codes/t5/base_t5.ipynb)
+    - [T5 implementation for Abstractive Summarization in python](codes/t5/t5_for_abstractive_summarization.ipynb)
     
