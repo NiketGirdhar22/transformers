@@ -24,3 +24,5 @@ Flow:
     - [T5 implementation for Abstractive Summarization in python](codes/t5/t5_for_abstractive_summarization.ipynb)
 - **ViT**
     - [Unserstanging ViT](vit.md)
+
+- [**Fine-tuning a image captioning model using ViT + GPT based transformer models**](codes/vit/image_captioning_finetune.ipynb)
