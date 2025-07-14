@@ -26,3 +26,7 @@ Flow:
     - [Unserstanging ViT](vit.md)
 
 - [**Fine-tuning a image captioning model using ViT + GPT based transformer models**](codes/vit/image_captioning_finetune.ipynb)
+
+- **MLOps**
+    - [Introduction to MLOps](mlops.md)
+    - [Sharing models on HuggingFace](codes/MLOps/sharingModelsonHuggingFace.ipynb)
