@@ -16,7 +16,7 @@ Flow:
     - [Siamese BERT networks for semantic searching](Siamese_BERT_networks_for_semantic_searching.md)
 - **GPT**
     - [Understaing GPT](gpt.md)
-    - [Pre-Training in GPT](pretraining_gpt.md)
+    - [Pre-Training in GPT](pretraining_finetuning_gpt.md)
     - [Teaching GPT multiple tasks at once with prompt engineering](codes/gpt/teaching_gpt_multiple_tasks_with_prompt_engg.ipynb)
 - **T5**
     - [Understanding T5](t5.md)
